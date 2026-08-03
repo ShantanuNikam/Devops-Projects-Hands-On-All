@@ -78,7 +78,7 @@
 
 - `sudo dnf install git `
   ![alt text](image-7.png)
-  
+
 * Install Github Plugin on Jenkins GUI
   
 ![alt text](image-8.png)
@@ -106,18 +106,47 @@ JAVA_HOME,M2,M2_HOME
 ## Step 4: Setup a Docker Host
 
 * Setup a Linux EC2 Instance
+   ![alt text](image-11.png)
 * Install Docker
+  sudo dnf install docker
+   ![alt text](image-12.png)
 * Start Docker Services
+
+  sudo systemctl status docker
+  sudo systemctl enable docker
+  sudo systemctl start docker
+  ![alt text](image-13.png)
 * Run Basic Docker Commands
+
+  sudo docker ps
+  sudo docker images
+   ![alt text](image-14.png)
 
 
 ### Create Tomcat Docker Container
+    
+* Create a Docker image first manually:
+    sudo docker pull tomcat
+    ![alt text](image-15.png)
 
 
-**Create a Customized Dockerfile for Tomcat:**
+    sudo docker images
+    ![alt text](image-16.png)
 
+    sudo docker run -d --name mytomcat-container -p 8081:8080 tomcat 
 
+    ![alt text](image-17.png)
+    ![alt text](image-18.png)
+    
+* Create a Customized Dockerfile for Tomcat:
 
+  sudo docker build -t mytomcatserver_using_dockerfile .
+   ![alt text](image-19.png)
+
+    
+    sudo docker run -d --name mytomcat-container -p 8081:8080 mytomcatserver_using_dockerfile
+
+    ![alt text](image-20.png)
 ### Step 5: Integrate Docker with Jenkins
 
 * Create a dockeradmin user
