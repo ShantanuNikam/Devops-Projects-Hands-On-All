@@ -77,7 +77,7 @@ Project 21 | Service Mesh	⭐⭐⭐⭐⭐	| Istio, Jaeger, traffic management
 
 - ⭐ Complete Level 1 Project Day-03
 - ⭐ In-Progress Level 1 Project Day-05
-- ⭐ In-Progress Level 1 Project Day-17
+- ⭐ Completed Level 1 Project Day-17
 
 
 
