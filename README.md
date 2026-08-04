@@ -75,9 +75,9 @@ Project 21 | Service Mesh	⭐⭐⭐⭐⭐	| Istio, Jaeger, traffic management
 
 ## Project Progress
 
-- [x]  Complete Level 1 Project Day-03
-- [ ] In-Progress Level 1 Project Day-05
-- [x] Completed Level 1 Project Day-17
+- **Completed:** [██████████] Level 1 Project Day-03
+- **Progress:** [███████░░░] 70% Level 1 Project Day-05
+![Progress](https://shields.io) Completed Level 1 Project Day-17
 
 
 
