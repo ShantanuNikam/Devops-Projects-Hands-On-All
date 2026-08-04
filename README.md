@@ -75,22 +75,22 @@ Project 21 | Service Mesh	⭐⭐⭐⭐⭐	| Istio, Jaeger, traffic management
 
 ## Project Progress
 
-- ⭐ Complete Level 1 Project Day-03
-- ⭐ In-Progress Level 1 Project Day-05
-- ⭐ Completed Level 1 Project Day-17
+- [x]  Complete Level 1 Project Day-03
+- [ ] In-Progress Level 1 Project Day-05
+- [x] Completed Level 1 Project Day-17
 
 
 
-- ⭐ Scheduled Level 2 Project Day-02
-- ⭐ Scheduled Level 2 Project Day-08
-- ⭐ Scheduled Level 2 Project Day-16
+- [ ] Scheduled Level 2 Project Day-02
+- [ ] Scheduled Level 2 Project Day-08
+- [ ] Scheduled Level 2 Project Day-16
 
 
 
-- ⭐ In consideration Level 1 Project Day-24
-- ⭐ In consideration Level 2 Project Day-23
-- ⭐ In consideration Level 3 Project Day-01
-- ⭐ In consideration Level 3 Project Day-18
+- [ ] In consideration Level 1 Project Day-24
+- [ ] In consideration Level 2 Project Day-23
+- [ ] In consideration Level 3 Project Day-01
+- [ ] In consideration Level 3 Project Day-18
 
 ## License
 
