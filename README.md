@@ -74,23 +74,26 @@ Project 21 | Service Mesh	⭐⭐⭐⭐⭐	| Istio, Jaeger, traffic management
 `Enterprise Kubernetes`,`GitOps`,`Multi-cloud`,`Service Mesh`,`Observability`,`DevSecOps`
 
 ## Project Progress
-
-- **Completed:** [██████████] Level 1 Project Day-03
-- **Progress:** [███████░░░] 70% Level 1 Project Day-05
-![Progress](https://shields.io) Completed Level 1 Project Day-17
-
+**Completed:**
+- ![](https://geps.dev/progress/100) Level 1 Project Day-03
+- ![](https://geps.dev/progress/100) Level 1 Project Day-17
 
 
-- [ ] Scheduled Level 2 Project Day-02
-- [ ] Scheduled Level 2 Project Day-08
-- [ ] Scheduled Level 2 Project Day-16
+ **Progress:** 
+- ![](https://geps.dev/progress/70) Level 1 Project Day-05
 
+ **Scheduled:** 
 
+- [ ] Level 2 Project Day-02
+- [ ] Level 2 Project Day-08
+- [ ] Level 2 Project Day-16
 
-- [ ] In consideration Level 1 Project Day-24
-- [ ] In consideration Level 2 Project Day-23
-- [ ] In consideration Level 3 Project Day-01
-- [ ] In consideration Level 3 Project Day-18
+**In Consideration:** 
+
+- [ ]  Level 1 Project Day-24
+- [ ]  Level 2 Project Day-23
+- [ ]  Level 3 Project Day-01
+- [ ]  Level 3 Project Day-18
 
 ## License
 
