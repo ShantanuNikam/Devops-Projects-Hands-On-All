@@ -91,14 +91,14 @@
 
 * Setup Maven on Jenkins Server
 
-![alt text](image-10.png)
 
-* Setup Environment Variables
-JAVA_HOME,M2,M2_HOME
+* Setup Environment Variables JAVA_HOME,M2,M2_HOME
 * Install Maven Plugin
-
-
 * Configure Maven and Java
+
+* Everything is being done by jenkins server itself
+
+![alt text](image-10.png)
 
 
 
@@ -136,23 +136,49 @@ JAVA_HOME,M2,M2_HOME
     sudo docker run -d --name mytomcat-container -p 8081:8080 tomcat 
 
     ![alt text](image-17.png)
+
+   * While checking the tomcat server ran into an issue , below which was solved by moving the files 
+
+   ![alt text](image-21.png)
+
+    ![alt text](image-22.png)
+
+    * After above step , issue was solved and we can see the default tomcat server 
+
     ![alt text](image-18.png)
     
 * Create a Customized Dockerfile for Tomcat:
+
+  Created a docker image to solve above issue 
+
+  ![alt text](image-23.png)
 
   sudo docker build -t mytomcatserver_using_dockerfile .
    ![alt text](image-19.png)
 
     
-    sudo docker run -d --name mytomcat-container -p 8081:8080 mytomcatserver_using_dockerfile
+    sudo docker run -d --name tomcat-server-dockerfile -p 8080:8080 mytomcatserver_using_dockerfile
 
     ![alt text](image-20.png)
+
 ### Step 5: Integrate Docker with Jenkins
 
 * Create a dockeradmin user
-* Install the “Publish Over SSH” plugin
-* Add Dockerhost to Jenkins “configure systems”
+   
+   ![alt text](image-24.png)
 
+* Install the “Publish Over SSH” plugin
+
+  ![alt text](image-26.png)
+
+
+  ![alt text](image-25.png)
+
+  ![alt text](image-27.png)
+
+* Add Dockerhost to Jenkins “configure systems”
+  
+  ![alt text](image-28.png)
 
 
 ### Step 6: Create Jenkins Job to Build and Copy Artifacts on to Docker Host
