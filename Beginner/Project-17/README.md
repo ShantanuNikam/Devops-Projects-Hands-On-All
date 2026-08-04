@@ -153,17 +153,6 @@ Press enter or click to view image in full size
 
 ### **Step 5: Check Your Web Server**
 
-At first, I was not able to access the public IP of this instance. That was because I had to add an HTTP inbound rule.
-
-**Solution:**
-
-* Go to the AWS Management Console.
-    
-* Navigate to the EC2 Dashboard and find your instance.
-    
-* Check the security group rules associated with the instance.
-    
-* Ensure there is an inbound rule that allows traffic on port 80 from your IP address or from all sources (0.0.0.0/0).
     
 ![alt text](image-10.png)
 
