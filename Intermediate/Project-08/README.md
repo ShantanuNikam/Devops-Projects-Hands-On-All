@@ -60,9 +60,11 @@ Click 'Create'. This process will take 10-12 minutes. Wait till your cluster sho
 
 ![alt text](image-3.png)
 
+![Alt text](image-3.png)
+
 ### Step 3: Add Node Groups to our cluster
 
-![Alt text](image-3.png)
+![alt text](image-4.png)
 
 ```
 Now, lets add the worker nodes where the pods can run
