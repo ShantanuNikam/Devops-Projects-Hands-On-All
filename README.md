@@ -1,9 +1,20 @@
+# 🚀 DevOps & Cloud Infrastructure Project Portfolio
 
-# DEVOPS Projects Hands-On 
+Welcome to my central DevOps projects repository! This repository showcases hands-on implementations of modern Cloud Infrastructure, Infrastructure as Code (IaC), Containerization, Kubernetes Orchestration, and Automated CI/CD Pipelines.
 
-Hands-on DEVOPS Projects for DevOps Engineers.
+---
 
-Below is the list of devops projects taken from internet
+## 🛠 Tech Stack & Tools
+
+- **Cloud Provider:** Amazon Web Services (AWS — VPC, EC2, S3, IAM, DynamoDB)
+- **Infrastructure as Code (IaC):** Terraform (Modules, Remote State, Locking)
+- **Containerization & Orchestration:** Docker, Kubernetes (Deployments, Services, Ingress, Probes)
+- **CI/CD & Automation:** Jenkins, GitHub Actions, Ansible
+- **Scripting & OS:** Linux (RHEL/Ubuntu), Bash / Shell Scripting, Python, Git
+
+---
+
+Below is the list of devops projects 
 
 - Project 01 - Deploy Java Application on AWS 3-Tier Architecture
 - Project 02 - Deploy Scalable VPC Architecture on AWS Cloud
