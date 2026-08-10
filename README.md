@@ -115,15 +115,18 @@ Project 21 | Service Mesh	⭐⭐⭐⭐⭐	| Istio, Jaeger, traffic management
 - ![](https://geps.dev/progress/70) Level 1 Project Day-05
 
  **Scheduled:** 
- 
-- [ ] Level 2 Project Day-16
+- [ ]  Level 1 Project 24
+- [ ]  Level 2 Project 23
+- [ ]  Level 3 Project 01
+- [ ]  Level 3 Project 18
+- [ ] Level 2 Project 16
 
 **In Consideration:** 
 
-- [ ]  Level 1 Project Day-24
-- [ ]  Level 2 Project Day-23
-- [ ]  Level 3 Project Day-01
-- [ ]  Level 3 Project Day-18
+- [ ] Level 3 Project 25
+- [ ] Level 3 Project 11
+- [ ] Level 4 Project 09
+- [ ] Level 4 Project 19
 
 ## License
 
