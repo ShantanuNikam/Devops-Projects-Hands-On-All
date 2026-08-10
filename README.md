@@ -1,145 +1,127 @@
-# 🚀 DevOps & Cloud Infrastructure Project Portfolio
+# 🚀 Enterprise DevOps & Cloud Engineering Portfolio
 
-Welcome to my central DevOps projects repository! This repository showcases hands-on implementations of modern Cloud Infrastructure, Infrastructure as Code (IaC), Containerization, Kubernetes Orchestration, and Automated CI/CD Pipelines.
+[![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)](https://aws.amazon.com/)
+[![Terraform](https://img.shields.io/badge/Terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)](https://www.terraform.io/)
+[![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![Kubernetes](https://img.shields.io/badge/Kubernetes%20(EKS)-%23326CE5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)](https://kubernetes.io/)
+[![Jenkins](https://img.shields.io/badge/Jenkins-%23D24939.svg?style=for-the-badge&logo=jenkins&logoColor=white)](https://www.jenkins.io/)
+[![Linux](https://img.shields.io/badge/Linux%20(RHEL/Ubuntu)-%23FCC624.svg?style=for-the-badge&logo=linux&logoColor=black)](https://www.linux.org/)
 
----
-
-## 🛠 Tech Stack & Tools
-
-- **Cloud Provider:** Amazon Web Services (AWS — VPC, EC2, S3, IAM, DynamoDB)
-- **Infrastructure as Code (IaC):** Terraform (Modules, Remote State, Locking)
-- **Containerization & Orchestration:** Docker, Kubernetes (Deployments, Services, Ingress, Probes)
-- **CI/CD & Automation:** Jenkins, GitHub Actions, Ansible
-- **Scripting & OS:** Linux (RHEL/Ubuntu), Bash / Shell Scripting, Python, Git
+A centralized collection of production-style DevOps projects, hands-on cloud labs, Infrastructure-as-Code (IaC) modules, and CI/CD pipelines. This repository tracks my practical journey across AWS Cloud Architecture, Containerization, Kubernetes Orchestration, DevSecOps, and Automated Delivery.
 
 ---
 
-Below is the list of devops projects 
+## 📊 Active Sprint & Project Progress
 
-- Project 01 - Deploy Java Application on AWS 3-Tier Architecture
-- Project 02 - Deploy Scalable VPC Architecture on AWS Cloud
-- Project 03 - Fun with Linux for Cloud & DevOps Engineers
-- Project 04 - Production-Ready Django Deployment on AWS: Complete ECS & ECR DevOps Pipeline
-- Project 05 - Deploy your code on a Docker Container using Jenkins on AWS
-- Project 06 - Implementation of the Entire Advanced CI/CD Pipeline with Major DevOps Tools
-- Project 07 - DevOps-Journey-Using-Azure-DevOps
-- Project 08 - Kubernetes End to End Project on EKS(Amazon Kubernetes Service)
-- Project 09 - DevSecOps : Netflix Clone CI-CD with Monitoring | Email
-- Project 10 - Create a CI/CD pipeline for .NET with the DevOps Starter Project
-- Project 11 - Two-Tier AWS Infrastructure with Terraform
-- Project 12 - Deployment of Super Mario on Kubernetes using Terraform
-- Project 13 - Zomato Clone: Secure Deployment with DevSecOps CI/CD
-- Project 14 - End-to-End CI/CD Pipeline for Android Apps with GitHub Actions
-- Project 15 - Deploy an E-Commerce Three Tier application on AWS EKS with Helm
-- Project 16 - Real Time DevOps Project | Deploy to Kubernetes Using Jenkins | End to End DevOps Project | CI/CD
-- Project 17 - Deploying an app to AKS using Azure DevOps & Azure Cloud Shell
-- Project 18 - Jenkins Pipeline for Java based application using Maven, SonarQube, Argo CD, Helm and Kubernetes
-- Project 19 - From Scratch to Production: Deploying EKS Clusters and Applications with CI/CD using Jenkins and Terraform
-- Project 20 - Azure DevOps pipeline + Terraform Deployment Tutorial
-- Project 21 - AWS DevOps CICD Pipeline
-- Project 22 - AWS Fully Serverless Architecture with CI/CD
-- Project 23 - DevSecOps: Blue-Green Deployment of Swiggy-Clone on AWS ECS with AWS Code Pipeline
-- Project 24 - Real-Time DevSecOps Pipeline for a DotNet Web App 
-- Project 25 - DevSecOps (DevOps) Project: Deploying a Petshop Java-Based Application with CI/CD, Docker, and Kubernetes
-- Project 26 - DevOps Project to Automate Infrastructure on AWS Using Terraform and GitLab CICD
+### 🟢 Completed Milestones
+* [x] **Project 03 — Linux Administration & Scripting Fundamentals** `(100%)`
+  * *Tech:* `Linux (RHEL)` `Bash` `System Admin` `Filesystems`
+* [x] **Project 17 — Two-Tier AWS Infrastructure Provisioning with Terraform** `(100%)`
+  * *Tech:* `Terraform` `AWS EC2/S3` `IaC` `Modules`
+* [x] **Project 08 — Kubernetes End-to-End App Deployment on AWS EKS** `(100%)`
+  * *Tech:* `AWS EKS` `Docker` `Kubernetes` `kubectl`
+* [x] **Project 02 — Scalable Multi-AZ VPC Architecture on AWS Cloud** `(100%)`
+  * *Tech:* `AWS VPC` `NAT Gateway` `Route Tables` `Auto Scaling`
 
+---
 
+### 🟡 Active Development Sprint
+* **Project 05 — Containerized Code Deployment with Jenkins & Docker on AWS**
+  * ![](https://geps.dev/progress/70) `70% Complete — Configuring Webhooks & Build Automation`
+  * *Tech:* `Jenkins` `Docker` `Git` `Maven` `AWS`
 
-## Objectives
+---
 
-- [ ] Complete Projects Level 1 – Beginner ⭐
-- [ ] Complete Projects Level 2 – Beginner to Intermediate ⭐⭐
-- [ ] Complete Projects Level 3 – Intermediate ⭐⭐⭐
-- [ ] Complete Projects Level 4 – Advanced ⭐⭐⭐⭐
+### 🎯 Upcoming Roadmap (Next Sprints)
 
-## Project  Roadmap 
+#### 🔹 Sprint 1 (Advanced Automation DevSecOps)
+* [ ] **Project 11 — Two-Tier AWS Infrastructure with Advanced Terraform**
+* [ ] **Project 25 — DevSecOps Java Petshop App on Kubernetes**
 
-## Level 1 – Beginner ⭐
-| Project           | Difficulty | What you will learn |
-| ----------------- | ------------- | -------------------------|
-Project 03 | Fun with Linux	⭐	|Linux commands, users, permissions, filesystems, bash
-Project 05 | Deploy Code using Jenkins + Docker	⭐⭐ |	Jenkins basics, Maven build, Docker, CI basics
-Project 17 | Terraform Modules	⭐⭐	|Terraform syntax, modules, AWS resources
-Project 22 | Serverless Application	⭐⭐	|Lambda, API Gateway, DynamoDB basics
-Project 24 | Prometheus Monitoring Stack	⭐⭐	|Monitoring, Grafana dashboards, exporters
+#### 🔹 Sprint 2 (Enterprise CI/CD & GitOps)
+* [ ] **Project 01 — Deploy Java 3-Tier Application on AWS Architecture**
+* [ ] **Project 19 — Deploying EKS Clusters & Apps via Jenkins & Terraform**
+* [ ] **Project 16 — Real-Time Jenkins-to-Kubernetes End-to-End Pipeline**
 
-## Level 2 – Beginner to Intermediate ⭐⭐
-| Project           | Difficulty | What you will learn |
-| ----------------- | ------------- | -------------------------|
-Project 02 | AWS Scalable VPC	⭐⭐⭐	|Networking, NAT, Route Tables, Auto Scaling
-Project 08 | Kubernetes on EKS	⭐⭐⭐	| Kubernetes fundamentals
-Project 16 | Jenkins → Kubernetes	⭐⭐⭐	| CI/CD + Kubernetes deployment
-Project 20 | Azure DevOps + Terraform	⭐⭐⭐ |	Azure Pipelines
-Project 23 | GitLab CI/CD + Helm	⭐⭐⭐	| GitLab, Helm
+#### 🔹 Sprint 3 (Advanced Cloud & Infrastructure Automation)
 
+* [ ] **Project 09 — DevSecOps Netflix-Clone Pipeline with Observability**
+* [ ] **Project 23 — DevSecOps: Swiggy-Clone Blue-Green Deployment on AWS ECS**
+* [ ] **Project 24 — Prometheus & Grafana Monitoring Stack Implementation**
+* [ ] **Project 18 — GitOps Pipeline with Jenkins, SonarQube, ArgoCD, Helm & K8s**
 
-## Level 3 – Intermediate ⭐⭐⭐
-| Project           | Difficulty | What you will learn |
-| ----------------- | ------------- | -------------------------|
-Project 01 | Java 3-Tier AWS Deployment	⭐⭐⭐⭐	|EC2, ALB, RDS, SonarCloud, JFrog
-Project 04 | Django on ECS/ECR	⭐⭐⭐⭐	| Docker, ECS, Terraform
-Project 18 | Jenkins + ArgoCD + Helm	⭐⭐⭐⭐	| GitOps
-Project 25 | DevSecOps Petshop	⭐⭐⭐⭐	| Security scanning, Kubernetes
-Project 26 | Cloud Cost Optimization	⭐⭐⭐⭐ | Lambda automation, Cost Explorer
+---
 
-## Level 4 – Advanced ⭐⭐⭐⭐
-| Project           | Difficulty | What you will learn |
-| ----------------- | ------------- | -------------------------|
-Project 06 | Complete CI/CD Pipeline	⭐⭐⭐⭐⭐	|Terraform + Ansible + Jenkins + Kubernetes + Monitoring
-Project 07 | Azure DevOps Journey	⭐⭐⭐⭐⭐	|Enterprise Azure ecosystem
-Project 09 | Netflix Clone DevSecOps	⭐⭐⭐⭐⭐ |	Complete DevSecOps pipeline
-Project 15 | EKS Three Tier Application	⭐⭐⭐⭐⭐	| Helm, ALB Controller, Kubernetes production deployment
-Project 19 | Multi-Cloud Kubernetes	⭐⭐⭐⭐⭐	| AWS + Azure + GCP together
-Project 21 | Service Mesh	⭐⭐⭐⭐⭐	| Istio, Jaeger, traffic management
+## 🛠 Tech Stack & Tooling
 
-## Repository Structure
+```text
+├── Cloud Providers     : Amazon Web Services (VPC, EC2, S3, IAM, EKS, ECR, DynamoDB)
+├── Infrastructure/IaC  : Terraform (Modules, Remote State, DynamoDB Locking)
+├── Containers & K8s    : Docker, Kubernetes (EKS, Helm, Ingress, Deployments)
+├── CI/CD & Automation  : Jenkins, GitHub Actions, Ansible
+├── Operating Systems   : Linux (RHEL, Ubuntu), Shell Scripting (Bash)
+└── Version Control     : Git, GitHub
+```
 
-- `Beginner` → Folder for all Beginners projects
-- `Beginner to Intermediate` → Folder for all Beginners to Intermediate projects
-- `Intermediate` → Folder for all Intermediate projects
-- `Advanced` → Folder for all Advanced projects
+---
+### 📧 Contact & Professional 
+#### Links
+* LinkedIn: [Shantanu Nikam](https://linkedin.com/in/shantanunikam) 
+* Email: shantanu.nikam20@gmail.com  
 
+---
 
-
-## Skills gained 
-
-### Beginner
-`Linux`,`Git`,`Docker`,`Jenkins`,`Terraform basics`, `Monitoring`, `AWS fundamentals`
-
- ###  Beginner to Intermediate
-`VPC`, `IAM`,`EC2`,`Kubernetes`, `Helm`,`CI/CD`
-
-### Intermediate
- `Production deployment`,`Infrastructure design`, `Security`,`GitOps`, `Automation`
-
-### Advanced
-`Enterprise Kubernetes`,`GitOps`,`Multi-cloud`,`Service Mesh`,`Observability`,`DevSecOps`
-
-## Project Progress
-**Completed:**
-- ![](https://geps.dev/progress/100) Level 1 Project Day-03
-- ![](https://geps.dev/progress/100) Level 1 Project Day-17
-- ![](https://geps.dev/progress/100) Level 2 Project Day-08
-- ![](https://geps.dev/progress/100) Level 2 Project Day-02
-
- **Progress:** 
-- ![](https://geps.dev/progress/70) Level 1 Project Day-05
-
- **Scheduled:** 
-- [ ]  Level 1 Project 24
-- [ ]  Level 2 Project 23
-- [ ]  Level 3 Project 01
-- [ ]  Level 3 Project 18
-- [ ] Level 2 Project 16
-
-**In Consideration:** 
-
-- [ ] Level 3 Project 25
-- [ ] Level 3 Project 11
-- [ ] Level 4 Project 09
-- [ ] Level 4 Project 19
-
-## License
-
+### License:
 [MIT](https://choosealicense.com/licenses/mit/)
+
+<details>
+<summary><b>🔍 Click to expand full catalog of 26 projects categorized by difficulty</b></summary>
+
+## 📚 Master Project Index (26 Comprehensive Labs)
+
+### Level 1 – Beginner ⭐
+* **Project 03:** Fun with Linux for Cloud & DevOps Engineers
+* **Project 10:** Create a CI/CD pipeline for .NET with the DevOps Starter Project
+
+### Level 2 – Intermediate ⭐⭐⭐
+* **Project 01:** Deploy Java Application on AWS 3-Tier Architecture
+* **Project 02:** Deploy Scalable VPC Architecture on AWS Cloud
+* **Project 05:** Deploy Code on Docker Container using Jenkins
+* **Project 07:** DevOps Journey Using Azure DevOps
+* **Project 11:** Two-Tier AWS Infrastructure with Terraform
+* **Project 14:** End-to-End CI/CD Pipeline for Android Apps with GitHub Actions
+* **Project 17:** Two-Tier AWS Infrastructure with Terraform Modules
+* **Project 20:** Azure DevOps Pipeline + Terraform Deployment
+* **Project 21:** AWS DevOps CICD Pipeline
+
+### Level 3 – Advanced ⭐⭐⭐⭐
+* **Project 04:** Production-Ready Django Deployment on AWS ECS/ECR
+* **Project 06:** Advanced Multi-Tool CI/CD Pipeline
+* **Project 08:** Kubernetes End-to-End Project on AWS EKS
+* **Project 09:** DevSecOps Netflix Clone with Monitoring
+* **Project 12:** Deployment of Super Mario on Kubernetes using Terraform
+* **Project 13:** Zomato Clone: Secure Deployment with DevSecOps CI/CD
+* **Project 15:** Deploy E-Commerce 3-Tier App on AWS EKS with Helm
+* **Project 16:** Real-Time Jenkins to Kubernetes CI/CD Pipeline
+* **Project 22:** AWS Fully Serverless Architecture with CI/CD
+* **Project 25:** DevSecOps Petshop Java App with Docker & K8s
+
+### Level 4 – Advanced +  ⭐⭐⭐⭐
+
+* **Project 18:** GitOps Jenkins Pipeline with ArgoCD, Helm, and Kubernetes 
+* **Project 19:** Deploying EKS Clusters & Apps via Jenkins & Terraform
+* **Project 23:** DevSecOps: Blue-Green Deployment on AWS ECS
+* **Project 24:** Prometheus & Grafana Monitoring Stack
+* **Project 26:** Automated AWS Infrastructure with Terraform & GitLab CI/CD
+
+
+### 📁 Directory Architecture
+
+```text
+├── Beginner/                   # Level 1 foundational Linux & basic CI-CD labs
+├── Intermediate/               # Level 2 Docker , AWS VPC, EKS, Azure , Terraform basics & Pipeline labs
+├── Advanced/                   # Level 3 Multi-tier deployments, DevSecOps, & GitOps
+└── Advanced+/                  # Level 4 Enterprise Kubernetes & End-to-End Pipelines
+```
+
 
