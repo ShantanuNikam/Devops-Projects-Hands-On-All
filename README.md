@@ -17,10 +17,10 @@ A centralized collection of production-style DevOps projects, hands-on cloud lab
 * [x] **Project 03 — Linux Administration & Scripting Fundamentals** `(100%)`
   * *Tech:* `Linux (RHEL)` `Bash` `System Admin` `Filesystems`
 * [x] **Project 17 — Two-Tier AWS Infrastructure Provisioning with Terraform** `(100%)`
-  * *Tech:* `Terraform` `AWS EC2/S3` `IaC` `Modules`
+  * *Tech:* `Terraform` `AWS EC2` `IaC` `Modules`
 * [x] **Project 08 — Kubernetes End-to-End App Deployment on AWS EKS** `(100%)`
   * *Tech:* `AWS EKS` `Docker` `Kubernetes` `kubectl`
-* [x] **Project 02 — Scalable Multi-AZ VPC Architecture on AWS Cloud** `(100%)`
+* [x] **Project 27 — Infrastructure as Code (IaC) with Terraform to host a simple web server in AWS (Beginners)** `(100%)`
   * *Tech:* `AWS VPC` `NAT Gateway` `Route Tables` `Auto Scaling`
 
 ---
@@ -82,6 +82,8 @@ A centralized collection of production-style DevOps projects, hands-on cloud lab
 ### Level 1 – Beginner ⭐
 * **Project 03:** Fun with Linux for Cloud & DevOps Engineers
 * **Project 10:** Create a CI/CD pipeline for .NET with the DevOps Starter Project
+* **Project 27:** Infrastructure as Code (IaC) with Terraform to host a simple web server in AWS (Beginners)
+
 
 ### Level 2 – Intermediate ⭐⭐⭐
 * **Project 01:** Deploy Java Application on AWS 3-Tier Architecture

@@ -1,4 +1,4 @@
-# AWS-Project-01: Infrastructure as Code (IaC) with Terraform to host a simple web server in AWS (Beginners)
+# Infrastructure as Code (IaC) with Terraform to host a simple web server in AWS (Beginners)
 
 ![](https://i0.wp.com/skundunotes.com/wp-content/uploads/2021/11/53-image-0.png?fit=1200%2C673&ssl=1)
 
