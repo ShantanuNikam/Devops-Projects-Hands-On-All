@@ -16,17 +16,15 @@ A centralized collection of production-style DevOps projects, hands-on cloud lab
 ### 🟢 Completed Milestones
 * [x] **Project 03 — Linux Administration & Scripting Fundamentals** `(100%)`
   * *Tech:* `Linux (RHEL)` `Bash` `System Admin` `Filesystems`
-* [x] **Project 17 — Two-Tier AWS Infrastructure Provisioning with Terraform** `(100%)`
+* [x] **Project 02 — Deploy Scalable VPC Architecture on AWS Cloud** `(100%)`
   * *Tech:* `Terraform` `AWS EC2` `IaC` `Modules`
-* [x] **Project 08 — Kubernetes End-to-End App Deployment on AWS EKS** `(100%)`
-  * *Tech:* `AWS EKS` `Docker` `Kubernetes` `kubectl`
 * [x] **Project 27 — Infrastructure as Code (IaC) with Terraform to host a simple web server in AWS (Beginners)** `(100%)`
   * *Tech:* `AWS VPC` `NAT Gateway` `Route Tables` `Auto Scaling`
 
 ---
 
 ### 🟡 Active Development Sprint
-* **Project 05 — Containerized Code Deployment with Jenkins & Docker on AWS**
+* **Project 05 — Deploy Code on Docker Container using Jenkins on AWS**
   * ![](https://geps.dev/progress/70) `70% Complete — Configuring Webhooks & Build Automation`
   * *Tech:* `Jenkins` `Docker` `Git` `Maven` `AWS`
 
@@ -88,7 +86,7 @@ A centralized collection of production-style DevOps projects, hands-on cloud lab
 ### Level 2 – Intermediate ⭐⭐⭐
 * **Project 01:** Deploy Java Application on AWS 3-Tier Architecture
 * **Project 02:** Deploy Scalable VPC Architecture on AWS Cloud
-* **Project 05:** Deploy Code on Docker Container using Jenkins
+* **Project 05:** Deploy Code on Docker Container using Jenkins on AWS
 * **Project 07:** DevOps Journey Using Azure DevOps
 * **Project 11:** Two-Tier AWS Infrastructure with Terraform
 * **Project 14:** End-to-End CI/CD Pipeline for Android Apps with GitHub Actions
