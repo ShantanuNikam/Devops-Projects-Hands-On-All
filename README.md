@@ -90,7 +90,7 @@ A centralized collection of production-style DevOps projects, hands-on cloud lab
 * **Project 07:** DevOps Journey Using Azure DevOps
 * **Project 11:** Two-Tier AWS Infrastructure with Terraform
 * **Project 14:** End-to-End CI/CD Pipeline for Android Apps with GitHub Actions
-* **Project 17:** Two-Tier AWS Infrastructure with Terraform Modules
+* **Project 17:** Deploying an app to AKS using Azure DevOps & Azure Cloud Shell
 * **Project 20:** Azure DevOps Pipeline + Terraform Deployment
 * **Project 21:** AWS DevOps CICD Pipeline
 
