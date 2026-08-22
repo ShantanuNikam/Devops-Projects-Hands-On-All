@@ -21,7 +21,7 @@ A centralized collection of production-style DevOps projects, hands-on cloud lab
 * [x] **Project 27 — Infrastructure as Code (IaC) with Terraform to host a simple web server in AWS (Beginners)** `(100%)`
   * *Tech:* `AWS VPC` `NAT Gateway` `Route Tables` `Auto Scaling`
 * [x] **Project 11 — Two-Tier AWS Infrastructure with Advanced Terraform** `(100%)`
-  * *Tech:* `AWS VPC` `AWS WAF` `ALB` `Auto Scaling` `Terraform` `Amazon RDS` EC2 `Instances S3` `CDN`
+  * *Tech:* `AWS VPC` `AWS WAF` `ALB` `Auto Scaling` `Terraform` `Amazon RDS` `EC2 Instances` `S3` `CDN`
 
 ---
 
