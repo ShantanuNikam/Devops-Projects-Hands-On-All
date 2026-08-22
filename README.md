@@ -20,6 +20,8 @@ A centralized collection of production-style DevOps projects, hands-on cloud lab
   * *Tech:* `Terraform` `AWS EC2` `IaC` `Modules`
 * [x] **Project 27 — Infrastructure as Code (IaC) with Terraform to host a simple web server in AWS (Beginners)** `(100%)`
   * *Tech:* `AWS VPC` `NAT Gateway` `Route Tables` `Auto Scaling`
+* [x] **Project 11 — Two-Tier AWS Infrastructure with Advanced Terraform** `(100%)`
+  * *Tech:* `AWS VPC` `AWS WAF` `ALB` `Auto Scaling` `Terraform` `Amazon RDS` EC2 `Instances S3` `CDN`
 
 ---
 
@@ -33,7 +35,7 @@ A centralized collection of production-style DevOps projects, hands-on cloud lab
 ### 🎯 Upcoming Roadmap (Next Sprints)
 
 #### 🔹 Sprint 1 (Advanced Automation DevSecOps)
-* [ ] **Project 11 — Two-Tier AWS Infrastructure with Advanced Terraform**
+
 * [ ] **Project 25 — DevSecOps Java Petshop App on Kubernetes**
 
 #### 🔹 Sprint 2 (Enterprise CI/CD & GitOps)
