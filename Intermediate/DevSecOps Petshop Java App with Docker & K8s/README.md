@@ -378,7 +378,6 @@ Retrieve the Public IP Address of your EC2 instance. Since SonarQube operates on
 **To proceed, navigate to your SonarQube server, then follow these steps:  
 **Click on Administration → Security → Users → Tokens. Next, update and **copy** the token by providing a name and clicking on Generate Token.
 
-squ_fa297f7fe9c96f16cb0a486a8111e85b21e874f2
 
 Go to the Jenkins Dashboard, then navigate to Manage Jenkins → Credentials → Add Secret Text. The screen should look like this:
 
@@ -446,7 +445,7 @@ Go to the Jenkins Dashboard, then click on Manage Jenkins → Plugins. Find the 
 
 After installing the plugin, proceed to configure the tool by navigating to Dashboard → Manage Jenkins → Tools →.
 
-![](<https://miro.medium.com/v2/resize:fit:700/0*X60nI5yrr2QuDkCV>)
+![alt text](image-14.png)
 
 apply and save
 
@@ -465,18 +464,31 @@ stage ('Build war file'){
             }
         }
 ```
+```c
+As i was using a lower version of instance , the 
 
 Apply, save and build.
 
-![](<https://miro.medium.com/v2/resize:fit:700/1*qadvqE3GmfImzakC7JP4Ew.jpeg>)
+# Create a 2GB swap file
+sudo fallocate -l 2G /swapfile
 
+# Secure the permissions
+sudo chmod 600 /swapfile
+
+# Set up Linux swap area
+sudo mkswap /swapfile
+
+# Enable the swap space
+sudo swapon /swapfile
+
+# Verify swap is active
+free -h
+```
 You can see the report,
 
-![](<https://miro.medium.com/v2/resize:fit:700/0*LzPAn4ADW758P2UX>)
+![alt text](image-15.png)
 
-![](<https://miro.medium.com/v2/resize:fit:640/0*2D2vHmHPBfxgR0kt.gif>)
-
-tired???
+Did'nt have the free NVD API Key ... and honestly don't want to check the website to request it.
 
 # **Step 6: Docker Set-up**
 
@@ -485,26 +497,31 @@ In Jenkins, navigate to `Manage Jenkins` -&gt; `Available Plugins` and install t
 
 Now, go to Dashboard → Manage Jenkins → Tools →
 
-![](<https://miro.medium.com/v2/resize:fit:700/0*zkbiXVWEdfptmP-y>)
+![alt text](image-19.png)
 
 apply and save
 
 Add DockerHub Username and Password (Access Token) in Global Credentials:
 
-![](<https://miro.medium.com/v2/resize:fit:700/1*_MUBvELznXnrjJ2oUf70wQ.png>)
+![alt text](image-18.png)
 
 ## **Step 7: Adding Ansible Repository and Install Ansible**
 
 Connect to your instance via SSH and run this commands, to install Ansible on your server:
 
 ```c
-sudo apt update -y
-sudo apt install software-properties-common -y
-sudo add-apt-repository --yes --update ppa:ansible/ansible
-sudo apt install ansible -y
-sudo apt install ansible-core -y
+sudo dnf update -y
+sudo dnf install python3-pip -y
+python3 -m pip install --user ansible
+echo 'export PATH=$PATH:$HOME/.local/bin' >> ~/.bashrc
+source ~/.bashrc
+
 ansible --version #to check if it installed properly or not
 ```
+
+![alt text](image-16.png)
+
+![alt text](image-17.png)
 
 To add inventory you can create a new directory or add in the default Ansible hosts file
 
@@ -524,7 +541,7 @@ Install Ansible Plugins by navigating to `Manage Jenkins` -&gt; `Available Plugi
 
 Now add Credentials to invoke Ansible with Jenkins.
 
-![](<https://miro.medium.com/v2/resize:fit:700/0*0ec-juCA0JMIJPCG>)
+![alt text](image-20.png)
 
 In the Private key section, paste your .pem key file content directly.
 
@@ -536,13 +553,13 @@ which ansible
 
 copy the path and paste it here:
 
-![](<https://miro.medium.com/v2/resize:fit:700/0*r8uGcwBJiE7G3TYm>)
+![alt text](image-22.png)
 
 Now, create an Ansible playbook that builds a Docker image, tags it, pushes it to Docker Hub, and then deploys it in a container using Ansible.
 
 It is already in github repo but you need to modify with your DockerHub credentials:
 
-![](<https://miro.medium.com/v2/resize:fit:700/1*cxOukfPWtvCoqXR2_lPOgQ.png>)
+
 
 Include this stage in the pipeline to build the Docker image, push it to Docker Hub, and run the container:
 
@@ -551,7 +568,7 @@ stage('Install Docker') {
             steps {
                 dir('Ansible'){
                   script {
-                         ansiblePlaybook credentialsId: 'ssh', disableHostKeyChecking: true, installation: 'ansible', inventory: '/etc/ansible/', playbook: 'docker-playbook.yaml'
+                         ansiblePlaybook credentialsId: 'ssh', disableHostKeyChecking: true, installation: 'ansible', inventory: '/etc/ansible/', playbook: 'Ansible/docker-playbook.yaml'
                         }
                    }
               }
@@ -570,82 +587,20 @@ Now after build process of the pipeline you would be able to see the result of w
 
 Create two instance for Kubernetes Master-Slave set up, you can use the below terraform code or create traditionally by using AWS Console:
 
-```c
-# Provider configuration
-provider "aws" {
-  region = "ap-south-1" # Specify the region
-}
-
-# Create a new security group that allows all inbound and outbound traffic
-resource "aws_security_group" "allow_all" {
-  name        = "allow_all_traffic"
-  description = "Security group that allows all inbound and outbound traffic"
-
-  ingress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-}
-
-# Launch the first EC2 instance
-resource "aws_instance" "my_ec2_instance1" {
-  ami             = "ami-0f58b397bc5c1f2e8" # Ensure this AMI ID is valid for your region
-  instance_type   = "t2.medium"
-  key_name        = "MyNewKeyPair"
-  security_groups = [aws_security_group.allow_all.name]
-
-  # Root block device with default size (8 GB for most Linux AMIs)
-  root_block_device {
-    volume_size = 8
-  }
-
-  tags = {
-    Name = "k8s-master"
-  }
-}
-
-# Launch the second EC2 instance
-resource "aws_instance" "my_ec2_instance2" {
-  ami             = "ami-0f58b397bc5c1f2e8" # Ensure this AMI ID is valid for your region
-  instance_type   = "t2.medium"
-  key_name        = "MyNewKeyPair"
-  security_groups = [aws_security_group.allow_all.name]
-
-  # Root block device with default size (8 GB for most Linux AMIs)
-  root_block_device {
-    volume_size = 8
-  }
-
-  tags = {
-    Name = "k8s-slave"
-  }
-}
-```
-
 Install Kubectl and Minikube on Jenkins machine,
 
 ```c
 # Install kubectl
 sudo apt-get update
-sudo apt-get install -y apt-transport-https gnupg2 curl
-curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
-sudo apt-get update
-sudo apt-get install -y kubectl
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin/kubectl
 kubectl version --client
 
 # Install Minikube
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
+minikube start --driver=docker
 minikube start
 ```
 
@@ -661,39 +616,47 @@ clear
 Now run this commands in both **master** and **worker** node:
 
 ```c
-sudo apt-get update
-
-sudo apt-get install -y docker.io
-sudo usermod –aG docker Ubuntu
+sudo yum install -y docker
+sudo usermod -aG docker ${USER}
 newgrp docker
 sudo chmod 777 /var/run/docker.sock
 
-sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-sudo tee /etc/apt/sources.list.d/kubernetes.list <<EOF
-deb https://apt.kubernetes.io/ kubernetes-xenial main
+
+sudo dnf install -y containerd
+sudo systemctl enable --now containerd
+
+cat <<EOF | sudo tee /etc/yum.repos.d/kubernetes.repo
+[kubernetes]
+name=Kubernetes
+baseurl=https://pkgs.k8s.io/core:/stable:/v1.28/rpm/
+enabled=1
+gpgcheck=1
+gpgkey=https://pkgs.k8s.io/core:/stable:/v1.28/rpm/repodata/repomd.xml.key
 EOF
 
-sudo apt-get update
+# 2. Update package list and install kubelet, kubeadm, and kubectl
+sudo dnf update -y
+sudo dnf install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
 
-echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /" | sudo tee /etc/apt/sources.list.d/kubernetes.list
-curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
-sudo apt update
-sudo apt install -y kubelet kubeadm kubectl
-
-sudo snap install kube-apiserver
+# 3. Enable the kubelet service
+sudo systemctl enable --now kubelet
 ```
 
-![](<https://miro.medium.com/v2/resize:fit:498/0*OvfCxkODfhGF5-Fy.gif>)
+![alt text](image-21.png)
 
 ## **In master instance,**
 
 ```c
+# 1. Initialize the Kubernetes control plane
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16
-# in case your in root exit from it and run below commands
+
+# 2. Configure kubectl access for the current non-root user
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
-kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+
+# 3. Apply the updated Flannel CNI network plugin
+kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
 ```
 
 ## **In worker instance,**
