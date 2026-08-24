@@ -512,9 +512,7 @@ Connect to your instance via SSH and run this commands, to install Ansible on yo
 ```c
 sudo dnf update -y
 sudo dnf install python3-pip -y
-python3 -m pip install --user ansible
-echo 'export PATH=$PATH:$HOME/.local/bin' >> ~/.bashrc
-source ~/.bashrc
+sudo python3 -m pip install ansible
 
 ansible --version #to check if it installed properly or not
 ```
@@ -577,11 +575,13 @@ stage('Install Docker') {
 
 Now after build process of the pipeline you would be able to see the result of web application by visiting the below url:
 
+![alt text](image-23.png)
+
 ```c
 <jenkins-ip:8081>/jpetstore
 ```
 
-![](<https://miro.medium.com/v2/resize:fit:700/1*Ui6oGezhYkByckNblJoOiQ.png>)
+![alt text](image-24.png)
 
 ## **Step 8: Kubernetes Setup**
 
@@ -848,3 +848,7 @@ pipeline{
 By following these steps, we successfully deployed a Java-based Petshop application using Jenkins, Docker, Kubernetes, Terraform, SonarQube, Trivy, and Ansible. This project not only demonstrates a comprehensive approach to modern application deployment but also highlights the importance of automation and security in the DevOps pipeline.
 
 This journey has been a valuable learning experience, from infrastructure provisioning to continuous integration and deployment, containerization, orchestration, and ensuring robust security measures. I hope this detailed guide helps you in your own deployment projects and inspires you to explore the powerful tools and techniques in the DevSecOps realm.
+
+
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDe+X2Tvln4nJ22fnQb2dhM8uw7l8BCZJ2iHOKj85C7xlQ+rgagUon7CExfW6vGLpyTBndG127rPr7TINBIVWtfR1BDheBgJ2j+/ZdL8eKZMtUbpNC8SXcmjRzWUNItf9sFUl8DNkLak4pJ5dnPijXmKV1dn1xrTEEzAMtYi+0vvBHuXZURVcm3ujZPk5V1HCPrpjryyICkQhBR44fQh5AGYDM6ZCNEtPWH644Q5BAsF/jws0r5GurAu2+DQpjVtf1goI2uje2ZTFOdosaC3aocbT0wUrjP8V1wM51sQlCD5hTWfUYlccO9drnOO/qQoET4MMMWemPQuOwFoZiaJoH1SkXj2+kyI6G4MMWx3BAOkokFi+TaaVNXmXOuXfDwnisu3U8UUCP65JLqi/Jv39U22TUrYkP9+2rdd4WXYDpZ1CcRTmjb35BmynQgcAEb2GwzwDP4yYqyMXbKJjzgj8J6m/dPprEX4COWjF0vp1kbnXsvSgx9f5b1CGeXhqNioak= jenkins@ip-172-31-75-57.ec2.internal
