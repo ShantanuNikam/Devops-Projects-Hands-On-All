@@ -233,7 +233,7 @@ SSH into the EC2 instance with your key pair and run the following commands:
 
 ```go
 # Update packages
-sudo apt update -y
+sudo yum update -y
 
 # Install Jenkins
 sudo wget -O /etc/yum.repos.d/jenkins.repo     https://pkg.jenkins.io/rpm-stable/jenkins.repo
@@ -250,6 +250,7 @@ sudo yum install -y docker
 sudo usermod -aG docker ${USER}
 newgrp docker
 sudo chmod 777 /var/run/docker.sock
+sudo systemctl start docker
 
 # Install Trivy
 cat << EOF | sudo tee -a /etc/yum.repos.d/trivy.repo
@@ -273,7 +274,7 @@ since Apache Maven’s default proxy is 8080, we need to change the port of Jenk
 ```c
 sudo systemctl stop jenkins
 sudo systemctl status jenkins
-sudo systemctl edit jenkins
+sudo vi /usr/lib/systemd/system/jenkins.service
 Change Environments="Jenkins_port=8090" save and exit
 sudo systemctl daemon-reload
 sudo systemctl restart jenkins
@@ -307,7 +308,6 @@ Enter username and password, click on login and change password
 ```c
 username admin
 password admin
-password admin123
 ```
 
 ![alt text](image-6.png)
@@ -522,7 +522,6 @@ ansible --version #to check if it installed properly or not
 ![alt text](image-17.png)
 
 To add inventory you can create a new directory or add in the default Ansible hosts file
-
 ```c
 cd /etc/ansible
 sudo vi hosts
@@ -534,6 +533,22 @@ sudo vi hosts
 ```
 
 save and exit.
+
+Add below authorized_keys for jenkins user so that Ansible connects to server
+
+```c
+sudo su -s /bin/bash jenkins
+ssh-keygen
+```
+Change the directory to .ssh and copy the public key (id\_[**rsa.pub**](http://rsa.pub/))
+
+```c
+cd .ssh
+cat id_rsa.pub  #copy this public key
+```
+
+After copying the public key from the Ansible Main, navigate to the `.ssh` directory on the machine and paste the copied public key into the `authorized_keys` file.
+
 
 Install Ansible Plugins by navigating to `Manage Jenkins` -&gt; `Available Plugins.`
 
